@@ -22,7 +22,7 @@
   --font-heading: 'Manrope', 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --max-width: 1160px;
+  --max-width: 1260px;
   --nav-height: 72px;
 
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -538,7 +538,7 @@ h1, h2, h3, h4 {
 
 .project-section__inner {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   gap: 5rem;
   align-items: start;
 }
@@ -642,6 +642,10 @@ h1, h2, h3, h4 {
 
 .project-img-full {
   margin-top: 2.5rem;
+}
+
+.image-aside {
+    max-width: 65%;
 }
 
 /* Tools/Info chips */
