@@ -595,6 +595,16 @@ h1, h2, h3, h4 {
   .key-points--3col {
     grid-template-columns: 1fr;
   }
+
+  .project-hero {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .next-project div {
+    padding: 4rem 1.5rem;
+  }
+
 }
 
 /* Key Points Grid */
@@ -621,15 +631,6 @@ h1, h2, h3, h4 {
   color: var(--color-text-secondary);
   line-height: 1.7;
 }
-
-.project-hero {
-    flex-direction: column;
-    row-gap: 2rem;
-  }
-
-  .next-project div {
-    padding: 4rem 1.5rem;
-  }
 
 /* Image Grid in project pages */
 .project-img-grid {
