@@ -14,10 +14,10 @@
   --color-text:             #1C1B18;
   --color-text-secondary:   #78756F;
   --color-text-muted:       #ABA89F;
-  --color-text-charcoal:    #323233;
   --color-border:           #DAD7CF;
   --color-white:            #FDFCF9;
   --color-purple:           #4D44E3;
+  --color-charcoal:    #E4E2E2;
 
   --font-heading: 'Manrope', 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -658,22 +658,27 @@ h1, h2, h3, h4 {
    ============================================ */
 
 .next-project {
-  padding: 5rem 2rem;
-  max-width: var(--max-width);
+  min-width: 100%;
   margin: 0 auto;
-  display: block;
-  border-top: 1px solid var(--color-border);
+  text-align: center;
+  /* border-top: 1px solid var(--color-border); */
+  background-color: var(--color-charcoal);
   text-decoration: none;
   color: inherit;
   transition: background var(--transition);
 }
 
-.next-project__label {
-  margin-bottom: 0.75rem;
+.next-project div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+    padding: 8rem 8rem;
 }
 
 .next-project__title {
-  font-size: 1.75rem;
+  font-size: 1.95rem;
+  font-weight: 600;
   display: inline-block;
   transition: transform 0.3s var(--ease);
 }
