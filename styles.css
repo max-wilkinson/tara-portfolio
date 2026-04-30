@@ -4,6 +4,7 @@
 
 /* --- Google Fonts Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 /* --- Custom Properties --- */
 :root {
@@ -13,10 +14,12 @@
   --color-text:             #1C1B18;
   --color-text-secondary:   #78756F;
   --color-text-muted:       #ABA89F;
+  --color-text-charcoal:    #323233;
   --color-border:           #DAD7CF;
   --color-white:            #FDFCF9;
+  --color-purple:           #4D44E3;
 
-  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Manrope', 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max-width: 1160px;
@@ -82,6 +85,17 @@ h1, h2, h3, h4 {
   color: var(--color-text-secondary);
 }
 
+.heading {
+  font-family: var(--font-body);
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.highlight-text {
+    color: var(--color-purple);
+}
+
 /* ============================================
    LAYOUT UTILITIES
    ============================================ */
@@ -111,10 +125,12 @@ h1, h2, h3, h4 {
   right: 0;
   z-index: 100;
   height: var(--nav-height);
-  background: rgba(246, 244, 239, 0.92);
+  /* background: rgba(246, 244, 239, 0.92); */
+  background-color: var(--color-white);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-border);
+  /* border-bottom: 1px solid var(--color-border); */
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 .nav__inner {
@@ -129,8 +145,8 @@ h1, h2, h3, h4 {
 
 .nav__logo {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--color-text);
   letter-spacing: 0.01em;
   transition: opacity var(--transition);
@@ -147,10 +163,9 @@ h1, h2, h3, h4 {
 }
 
 .nav__link {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--color-text-secondary);
   transition: color var(--transition);
   position: relative;
@@ -162,8 +177,8 @@ h1, h2, h3, h4 {
   bottom: -3px;
   left: 0;
   width: 0;
-  height: 1px;
-  background: var(--color-text);
+  height: 2px;
+  background: var(--color-purple);
   transition: width var(--transition);
 }
 
@@ -177,7 +192,7 @@ h1, h2, h3, h4 {
 }
 
 .nav__link.active {
-  color: var(--color-text);
+  color: var(--color-purple);
 }
 
 /* ============================================
@@ -187,6 +202,8 @@ h1, h2, h3, h4 {
 .page-wrapper {
   padding-top: var(--nav-height);
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* ============================================
@@ -227,7 +244,7 @@ h1, h2, h3, h4 {
 
 .footer {
   padding: 2.5rem 0;
-  border-top: 1px solid var(--color-border);
+  /* border-top: 1px solid var(--color-border); */
   margin-top: 6rem;
 }
 
@@ -246,17 +263,23 @@ h1, h2, h3, h4 {
 }
 
 .footer__linkedin {
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 0.8rem;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  border-bottom: 1px solid currentColor;
+  color: var(--color-text-muted);
   transition: color var(--transition);
+  text-decoration: underline;
 }
 
 .footer__linkedin:hover {
   color: var(--color-text);
+}
+
+.footer__brand {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.01em;
 }
 
 /* ============================================
@@ -264,24 +287,20 @@ h1, h2, h3, h4 {
    ============================================ */
 
 .hero {
-  min-height: calc(100vh - var(--nav-height));
+  /* min-height: calc(100vh - var(--nav-height)); */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6rem 2rem 4rem;
+  padding: 18rem 2rem 10rem;
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 0 auto 12rem auto;
   position: relative;
-}
-
-.hero__eyebrow {
-  margin-bottom: 2rem;
 }
 
 .hero__headline {
   font-size: clamp(2.6rem, 6vw, 5rem);
-  font-weight: 400;
-  max-width: 14ch;
+  font-weight: 600;
+  max-width: 20ch;
   line-height: 1.12;
   color: var(--color-text);
 }
@@ -316,14 +335,8 @@ h1, h2, h3, h4 {
    ============================================ */
 
 .projects-section {
-  padding: 4rem 0 2rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.projects-section__header {
-  padding: 0 2rem 3rem;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  padding: 2rem 0 4rem;
+  /* border-top: 1px solid var(--color-border); */
 }
 
 .projects-grid {
@@ -385,36 +398,6 @@ h1, h2, h3, h4 {
   margin-bottom: 0.35rem;
 }
 
-.project-card__company {
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 1rem;
-  font-weight: 400;
-}
-
-.project-card__desc {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  line-height: 1.65;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.project-card__arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  transition: color var(--transition), gap var(--transition);
-}
-
 .project-card:hover .project-card__arrow {
   color: var(--color-text);
   gap: 0.75rem;
@@ -433,42 +416,40 @@ h1, h2, h3, h4 {
    ABOUT PAGE
    ============================================ */
 
-.about-hero {
-  padding: 6rem 2rem 5rem;
+.about {
   max-width: var(--max-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 6rem;
-  align-items: start;
+  padding: 5rem 2rem 3rem;
+  display: flex;
+  justify-content: center;
 }
 
-.about-hero__label {
-  padding-top: 0.25rem;
+.about--continued {
+  padding-top: 0;
+  padding-bottom: 5rem;
 }
 
-.about-hero__heading {
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
-  margin-bottom: 2.5rem;
-  line-height: 1.15;
+.about__eyebrow {
+  margin-bottom: 2rem;
 }
 
-.about-hero__body {
+.about__body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 70ch;
 }
 
-.about-hero__body p {
+.about__body p {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--color-text-secondary);
 }
 
-.about-photo {
+.about__photo {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem 5rem;
+  padding: 2rem 2rem 3rem;
 }
 
 /* ============================================
@@ -573,6 +554,40 @@ h1, h2, h3, h4 {
   margin-bottom: 0;
 }
 
+.project-section__list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0 0 1.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.project-section__list li {
+  margin-bottom: 0.4rem;
+}
+
+.project-section__sublabel {
+  margin-top: 0.5rem;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* 3-column variant of key-points grid */
+.key-points--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .key-points--3col {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Key Points Grid */
 .key-points {
   display: grid;
@@ -638,37 +653,43 @@ h1, h2, h3, h4 {
   border-radius: 2px;
 }
 
-/* Next Project Navigation */
+/* ============================================
+   NEXT PROJECT (updated — arrow inline in title)
+   ============================================ */
+
 .next-project {
   padding: 5rem 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   border-top: 1px solid var(--color-border);
   text-decoration: none;
   color: inherit;
   transition: background var(--transition);
-  border-radius: 2px;
-}
-
-.next-project:hover .next-project__arrow {
-  transform: translateX(8px);
 }
 
 .next-project__label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .next-project__title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  display: inline-block;
+  transition: transform 0.3s var(--ease);
+}
+
+.next-project:hover .next-project__title {
+  transform: translateX(8px);
 }
 
 .next-project__company {
   font-size: 0.9rem;
   color: var(--color-text-secondary);
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.next-project:hover .next-project__arrow {
+  transform: translateX(8px);
 }
 
 .next-project__arrow {
@@ -730,7 +751,6 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   .container,
   .hero,
-  .projects-section__header,
   .projects-grid,
   .project-body,
   .about-hero,
