@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tara Wilkinson — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Tara Wilkinson</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link active">Work</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE WRAPPER ===== -->
+  <div class="page-wrapper">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <p class="label hero__eyebrow">UX / UI Designer</p>
+      <h1 class="hero__headline">
+        Crafting digital products through research and visual precision.
+      </h1>
+      <div class="hero__scroll">
+        <span class="hero__scroll-line"></span>
+        Scroll to explore
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects-section" id="work">
+      <div class="projects-section__header">
+        <p class="label">Selected Work</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Card 1: CES 2020 -->
+        <a href="ces-2020.html" class="project-card">
+          <div class="project-card__img-wrap">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              Replace with project image
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="label project-card__category">Vehicle Infotainment</span>
+            <h2 class="project-card__title">Harman International CES 2020</h2>
+            <p class="project-card__company">Harman International &amp; Samsung</p>
+            <p class="project-card__desc">A conceptual in-vehicle infotainment system for the Smart Fortwo, showcased live at the Consumer Electronics Show, featuring hexagonal design language and multi-theme UI.</p>
+            <span class="project-card__arrow">View Case Study →</span>
+          </div>
+        </a>
+
+        <!-- Card 2: Kiosk -->
+        <a href="kiosk.html" class="project-card">
+          <div class="project-card__img-wrap">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              Replace with project image
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="label project-card__category">Kiosk Application</span>
+            <h2 class="project-card__title">Harman and AT&amp;T Event Demo Kiosk</h2>
+            <p class="project-card__company">Harman International &amp; AT&amp;T</p>
+            <p class="project-card__desc">An interactive touch kiosk demonstrating real-world 4G vs 5G network performance differences for conferences and events, designed for high-distraction environments.</p>
+            <span class="project-card__arrow">View Case Study →</span>
+          </div>
+        </a>
+
+        <!-- Card 3: Ford DMT -->
+        <a href="ford-dmt.html" class="project-card">
+          <div class="project-card__img-wrap">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              Replace with project image
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="label project-card__category">Web Experience</span>
+            <h2 class="project-card__title">Ford Data Management Tool</h2>
+            <p class="project-card__company">Ford Motor Company</p>
+            <p class="project-card__desc">A Downstream Data Utility feature for Ford's internal OTA updates platform, enabling engineers to edit or roll back deployed software packages with batch operations and clear system feedback.</p>
+            <span class="project-card__arrow">View Case Study →</span>
+          </div>
+        </a>
+
+        <!-- Card 4: UConnect 5 -->
+        <a href="uconnect5.html" class="project-card">
+          <div class="project-card__img-wrap">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              Replace with project image
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="label project-card__category">Vehicle Infotainment</span>
+            <h2 class="project-card__title">Stellantis UConnect5</h2>
+            <p class="project-card__company">Stellantis × Harman International</p>
+            <p class="project-card__desc">Next-generation in-vehicle infotainment system scaled across multiple Stellantis brands — Maserati, Jeep, Fiat, and more — with multilingual support and brand-specific UI themes.</p>
+            <span class="project-card__arrow">View Case Study →</span>
+          </div>
+        </a>
+
+        <!-- Card 5: FAQ Page (wide) -->
+        <a href="faq-page.html" class="project-card project-card--wide">
+          <div class="project-card__img-wrap">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              Replace with project image
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="label project-card__category">Web Experience</span>
+            <h2 class="project-card__title">Ford Internal Site FAQ Page</h2>
+            <p class="project-card__company">Ford Motor Company</p>
+            <p class="project-card__desc">A research-driven FAQ page designed to bridge knowledge gaps around technical OTA terminology for internal Ford engineers, informed by user interviews, job shadowing, and card sorting.</p>
+            <span class="project-card__arrow">View Case Study →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__text">Professional UX/UI Designer. Built with Sophisticated Minimalism.</p>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer__linkedin">LinkedIn</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
