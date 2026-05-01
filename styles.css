@@ -345,7 +345,7 @@ h1, h2, h3, h4 {
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
+  gap: 1rem;
 }
 
 .project-card {
@@ -390,12 +390,19 @@ h1, h2, h3, h4 {
 .project-card__category {
   display: block;
   margin-bottom: 0.75rem;
+  color: var(--color-purple);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .project-card__title {
   font-size: 1.4rem;
   line-height: 1.25;
   margin-bottom: 0.35rem;
+}
+
+.project-card__description {
+    color: var(--color-text-muted)
 }
 
 .project-card:hover .project-card__arrow {
