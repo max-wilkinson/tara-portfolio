@@ -468,17 +468,28 @@ h1, h2, h3, h4 {
    ============================================ */
 
 /* Project Hero */
+.project-hero__container {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    padding: 5rem 2rem 4rem;
+    margin: 0 auto;
+}
+
 .project-hero {
-  padding: 5rem 2rem 4rem;
-  max-width: var(--max-width);
+  /* padding: 5rem 2rem 4rem; */
+  /* max-width: var(--max-width); */
   margin: 0 auto;
-  border-bottom: 1px solid var(--color-border);
+  /* border-bottom: 1px solid var(--color-border); */
   display: flex;
   column-gap: 5rem;
 }
 
 .project-hero__category {
   margin-bottom: 1.5rem;
+  background-color: var(--color-surface);
+  width: fit-content;
+  padding: 4px 10px;
 }
 
 .project-hero__company {
