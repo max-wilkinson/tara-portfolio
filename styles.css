@@ -8,7 +8,9 @@
 
 /* --- Custom Properties --- */
 :root {
-  --color-bg:               #F6F4EF;
+  /* --color-bg:               #F6F4EF; */
+  --color-bg:               #faf9f3;
+  --color-bg-alt:           #F6F3F2;
   --color-surface:          #EDEAE3;
   --color-surface-hover:    #E4E1D9;
   --color-text:             #1C1B18;
@@ -554,6 +556,11 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid var(--color-border);
 }
 
+.project-section--alt {
+    background-color: var(--color-bg-alt);
+    border-bottom: none;
+}
+
 .project-section:last-of-type {
   border-bottom: none;
 }
@@ -563,6 +570,18 @@ h1, h2, h3, h4 {
   grid-template-columns: 1fr 3fr;
   gap: 5rem;
   align-items: start;
+}
+
+.project-section__inner--media {
+  grid-template-columns: 5fr 4fr; /* wider left column for the image */
+}
+
+.project-section__media {
+  margin: 0; /* reset default <figure> margin */
+}
+
+.project-section__media img {
+  width: 100%;
 }
 
 .project-section__label-col {}
@@ -606,6 +625,38 @@ h1, h2, h3, h4 {
   font-size: 1.1rem;
   letter-spacing: 0;
   text-transform: none;
+}
+
+.section-note {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
+.section-note__icon {
+  flex: 0 0 auto;
+  color: var(--color-purple);
+  line-height: 0;        /* keeps the SVG vertically tidy */
+  margin-top: 0.15rem;
+}
+
+.section-note__body {}
+
+.section-note__title {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.section-note__text {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* 3-column variant of key-points grid */
@@ -673,7 +724,8 @@ h1, h2, h3, h4 {
 }
 
 .project-img-full {
-  margin-top: 2.5rem;
+  margin-top: 0rem;
+  margin-bottom: 6rem;
 }
 
 .image-aside {
