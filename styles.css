@@ -9,20 +9,20 @@
 /* --- Custom Properties --- */
 :root {
   /* --color-bg:               #F6F4EF; */
-  --color-bg:               #faf9f3;
-  --color-bg-alt:           #F6F3F2;
-  --color-surface:          #EDEAE3;
-  --color-surface-hover:    #E4E1D9;
-  --color-text:             #1C1B18;
-  --color-text-secondary:   #78756F;
-  --color-text-muted:       #ABA89F;
-  --color-border:           #DAD7CF;
-  --color-white:            #FDFCF9;
-  --color-purple:           #4D44E3;
-  --color-charcoal:    #E4E2E2;
+  --color-bg: #faf9f3;
+  --color-bg-alt: #F6F3F2;
+  --color-surface: #EDEAE3;
+  --color-surface-hover: #E4E1D9;
+  --color-text: #1C1B18;
+  --color-text-secondary: #78756F;
+  --color-text-muted: #ABA89F;
+  --color-border: #DAD7CF;
+  --color-white: #FDFCF9;
+  --color-purple: #4D44E3;
+  --color-charcoal: #E4E2E2;
 
   --font-heading: 'Manrope', 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max-width: 1260px;
   --nav-height: 72px;
@@ -32,7 +32,9 @@
 }
 
 /* --- Reset --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -71,7 +73,10 @@ ul {
    TYPOGRAPHY
    ============================================ */
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   font-weight: 400;
   line-height: 1.2;
@@ -95,7 +100,7 @@ h1, h2, h3, h4 {
 }
 
 .highlight-text {
-    color: var(--color-purple);
+  color: var(--color-purple);
 }
 
 /* ============================================
@@ -349,7 +354,7 @@ h1, h2, h3, h4 {
 }
 
 .project-card-staggered {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 
 .project-card {
@@ -408,7 +413,7 @@ h1, h2, h3, h4 {
 }
 
 .project-card__description {
-    color: var(--color-text-muted)
+  color: var(--color-text-muted)
 }
 
 .project-card:hover .project-card__arrow {
@@ -471,11 +476,11 @@ h1, h2, h3, h4 {
 
 /* Project Hero */
 .project-hero__container {
-    display: flex;
-    flex-direction: column;
-    max-width: var(--max-width);
-    padding: 5rem 2rem 4rem;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width);
+  padding: 5rem 2rem 4rem;
+  margin: 0 auto;
 }
 
 .project-hero {
@@ -557,8 +562,8 @@ h1, h2, h3, h4 {
 }
 
 .project-section--alt {
-    background-color: var(--color-bg-alt);
-    border-bottom: none;
+  background-color: var(--color-bg-alt);
+  border-bottom: none;
 }
 
 .project-section:last-of-type {
@@ -573,11 +578,13 @@ h1, h2, h3, h4 {
 }
 
 .project-section__inner--media {
-  grid-template-columns: 5fr 4fr; /* wider left column for the image */
+  grid-template-columns: 5fr 4fr;
+  /* wider left column for the image */
 }
 
 .project-section__media {
-  margin: 0; /* reset default <figure> margin */
+  margin: 0;
+  /* reset default <figure> margin */
 }
 
 .project-section__media img {
@@ -635,10 +642,16 @@ h1, h2, h3, h4 {
   padding-top: 2rem;
 }
 
+.section-note+.section-note {
+  margin-top: 0;
+  padding-top: 1.25rem;
+}
+
 .section-note__icon {
   flex: 0 0 auto;
   color: var(--color-purple);
-  line-height: 0;        /* keeps the SVG vertically tidy */
+  line-height: 0;
+  /* keeps the SVG vertically tidy */
   margin-top: 0.15rem;
 }
 
@@ -729,7 +742,7 @@ h1, h2, h3, h4 {
 }
 
 .image-aside {
-    max-width: 65%;
+  max-width: 65%;
 }
 
 /* Tools/Info chips */
@@ -766,11 +779,11 @@ h1, h2, h3, h4 {
 }
 
 .next-project div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 1.5rem;
-    padding: 8rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.5rem;
+  padding: 8rem 8rem;
 }
 
 .next-project__title {
@@ -851,6 +864,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 600px) {
+
   .container,
   .hero,
   .projects-grid,
