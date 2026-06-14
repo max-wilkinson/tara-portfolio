@@ -718,6 +718,74 @@ h4 {
   line-height: 1.7;
 }
 
+/* ============================================
+   CENTERED SECTION HEADER
+   ============================================ */
+
+.section-head--center {
+  text-align: center;
+  max-width: 70ch;
+  margin: 0 auto 3rem auto;
+}
+
+.section-head__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.section-head__intro {
+  font-size: 0.98rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ============================================
+   INFO CARDS
+   ============================================ */
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.info-cards--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-card {
+  background: var(--color-white);
+  /* border: 1px solid var(--color-border); */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  padding: 2rem 2rem;
+}
+
+.info-card__icon {
+  display: inline-flex;
+  color: var(--color-purple);
+  line-height: 0;
+  margin-bottom: 1.5rem;
+  max-height: 48px;
+  max-width: 48px;
+}
+
+.info-card__title {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.info-card__text {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* Image Grid in project pages */
 .project-img-grid {
   display: grid;
